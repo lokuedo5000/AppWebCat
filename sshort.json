@@ -2,11 +2,13 @@
 	{
 		"name": "Minecraft: Story Mode",
 		"fecha": "29, 7 de 2020",
-		"img": "https://i.imgur.com/KMGRV2v.jpg"
+		"img": "https://i.imgur.com/KMGRV2v.jpg",
+		"dcp": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat aut, quam praesentium cum.."
 	},
 	{
 		"name": "Life is Strange",
 		"fecha": "29, 7 de 2020",
-		"img": "https://i.imgur.com/RPcmtI7.jpg"
+		"img": "https://i.imgur.com/RPcmtI7.jpg",
+		"dcp": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat aut, quam praesentium cum.."
 	}
 ]

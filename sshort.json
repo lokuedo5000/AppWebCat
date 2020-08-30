@@ -4,34 +4,10 @@
 		"dis": "Telltale Games",
 		"fecha": "29, 7 de 2020",
 		"img": "https://i.imgur.com/KMGRV2v.jpg",
-		"dcp": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat aut, quam praesentium cum.."
-	},
-	{
-		"name": "Life is Strange",
-		"dis": "Square Enix",
-		"fecha": "29, 7 de 2020",
-		"img": "https://i.imgur.com/RPcmtI7.jpg",
-		"dcp": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat aut, quam praesentium cum.."
-	},
-	{
-		"name": "Halo: Spartan Strike",
-		"dis": "Microsoft Game Studios",
-		"fecha": "29, 7 de 2020",
-		"img": "https://i.imgur.com/fSTZESj.jpg",
-		"dcp": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat aut, quam praesentium cum.."
-	},
-	{
-		"name": "The Walking Dead",
-		"dis": "Telltale Games",
-		"fecha": "29, 7 de 2020",
-		"img": "https://i.imgur.com/hP6dae7.jpg",
-		"dcp": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat aut, quam praesentium cum.."
-	},
-	{
-		"name": "Far Cry 2",
-		"dis": "Ubisoft",
-		"fecha": "29, 7 de 2020",
-		"img": "https://i.imgur.com/sksFPLu.jpg",
+		"banner": "",
+		"cap": "https://i.imgur.com/2H9NjHj.jpg https://i.imgur.com/2H9NjHj.jpg https://i.imgur.com/2H9NjHj.jpg",
+		"requisitos": "",
+		"enlaces": "",
 		"dcp": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat aut, quam praesentium cum.."
 	}
 	

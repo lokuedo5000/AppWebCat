@@ -10,5 +10,24 @@
 		"fecha": "29, 7 de 2020",
 		"img": "https://i.imgur.com/RPcmtI7.jpg",
 		"dcp": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat aut, quam praesentium cum.."
+	},
+	{
+		"name": "Halo: Spartan Strike",
+		"fecha": "29, 7 de 2020",
+		"img": "https://i.imgur.com/fSTZESj.jpg",
+		"dcp": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat aut, quam praesentium cum.."
+	},
+	{
+		"name": "The Walking Dead",
+		"fecha": "29, 7 de 2020",
+		"img": "https://i.imgur.com/hP6dae7.jpg",
+		"dcp": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat aut, quam praesentium cum.."
+	},
+	{
+		"name": "Far Cry 2",
+		"fecha": "29, 7 de 2020",
+		"img": "https://i.imgur.com/sksFPLu.jpg",
+		"dcp": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat aut, quam praesentium cum.."
 	}
+	
 ]

@@ -1,2 +1,2 @@
 # viewpc
-aquí hay datos de programas en json
+hola si estas aquí es por que estas interesado en ayudarme

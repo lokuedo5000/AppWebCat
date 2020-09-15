@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Pagina</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="container">
+		<h3 class="titles"></h3>
+		<p class="dcp"></p>
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+	<script>
+	$.urlParam = function(name){
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        if (results == null){
+           return null;
+        }
+        else {
+           return decodeURI(results[1]) || 0;
+        }
+    }
+
+	const xhttp = new XMLHttpRequest();
+	// https://lokuedo5000.github.io/sshort/juegos.json
+    xhttp.overrideMimeType("application/json");
+	xhttp.open('GET', 'http://localhost/webhttp/json/prueba.php', true);
+
+    
+	xhttp.send(null);
+
+	xhttp.onreadystatechange = function(){
+		if (this.readyState == 4 && this.status == 200) {
+			let datos = JSON.parse(this.responseText);
+
+			var urid = $.urlParam('q');
+		    $(".titles").html(datos[urid].nombre);
+		    $(".dcp").html(datos[urid].dcp);
+
+
+
+
+		    function cargarlink() {
+
+		    	window.location.href = datos[urid].link;
+		    	
+		    }
+
+		    if (datos[urid].stat == "listo") {
+		    	window.location.href = "https://www.youtube.com/channel/UC6L8cXYchVwL3u8jYHDsPlg/?sub_confirmation=1";
+		    }else{
+		    	setInterval(cargarlink, 2000);
+		    }
+
+		    
+
+		    
+		
+
+		}
+	}
+	</script>
+	
+</body>
+</html>

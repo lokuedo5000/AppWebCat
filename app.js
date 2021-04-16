@@ -10,6 +10,7 @@ const {
   ipcRenderer,
   screen
 } = require('electron');
+const { autoUpdater } = require('electron-updater');
 const url = require('url');
 const path = require('path');
 const ejse = require('ejs-electron');
@@ -29,6 +30,7 @@ const dateTime = require('node-datetime');
 var file_fecha_ruta = path.join(__dirname, 'ServerGitHub', 'data', 'fechaUpdate.text');
 const userconfig = path.join(app.getPath('userData'), 'cogUser.json');
 ejse.data('file_cog', userconfig);
+
 // VARIABLES
 let mainWindow
 let loading
@@ -177,6 +179,10 @@ function winall() {
     mainWindowState.saveState(mainWindow);
     app.quit();
   })
+
+  mainWindow.once('ready-to-show', () => {
+    autoUpdater.checkForUpdatesAndNotify();
+  });
 }
 
 function installfilesApp() {
@@ -203,7 +209,7 @@ function installfilesApp() {
     }
   });
 
-  //AGREGAR MENU A MAINWINDOW
+  // AGREGAR MENU A MAINWINDOW
   const menuMainWindow = Menu.buildFromTemplate(templateMenu);
   installfiles.setMenu(menuMainWindow);
   installfiles.setMenuBarVisibility(false);
@@ -453,8 +459,20 @@ Menu.setApplicationMenu(null);
 //     description: 'Create a new window'
 //   }
 // ]);
+ipcMain.on('app_version', (event) => {
+  event.sender.send('app_version', { version: app.getVersion() });
+});
+autoUpdater.on('update-available', () => {
+  mainWindow.webContents.send('update_available');
+});
 
+autoUpdater.on('update-downloaded', () => {
+  mainWindow.webContents.send('update_downloaded');
+});
 
+ipcMain.on('restart_app', () => {
+  autoUpdater.quitAndInstall();
+});
 // Menu Template
 var templateMenu = [{
   label: 'CoffeeWeb',

@@ -1,0 +1,39 @@
+{
+  "name": "AppWebCat",
+  "version": "1.0.0",
+  "vCode": "1.2",
+  "description": "AppWebCat 2021",
+  "main": "app.js",
+  "enlaces": {
+    "tiempoUpdate": "0",
+    "update": "https://lokuedo5000.github.io/filesDtoLKD/update.zip",
+    "fechaUpdate": "16 de Abril 2021"
+  },
+  "scripts": {
+    "start": "electron .",
+    "win": "electron-packager . AppWebCat --overwrite --platform=win32 --arch=ia32 --icon=assets/icons/win/icv02.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"AppWebCat\""
+  },
+  "keywords": [],
+  "author": "@lokuedo5000",
+  "license": "ISC",
+  "dependencies": {
+    "@electron/remote": "^1.1.0",
+    "@popperjs/core": "^2.9.2",
+    "@tarekraafat/autocomplete.js": "^8.3.2",
+    "autocompleter": "^6.1.0",
+    "bootstrap": "^4.6.0",
+    "ejs-electron": "^2.1.1",
+    "electron-window-state-manager": "^0.3.2",
+    "extract-zip": "^1.7.0",
+    "jquery": "^3.6.0",
+    "mkdirp": "^0.5.5",
+    "moment": "^2.29.1",
+    "node-datetime": "^2.1.2",
+    "rmdir": "^1.2.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "electron": "^12.0.4",
+    "electron-packager": "^15.2.0"
+  }
+}

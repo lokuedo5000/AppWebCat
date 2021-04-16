@@ -1,0 +1,107 @@
+<div class="container">
+  <form method="get">
+    <div class="no_parte one_parte">
+      <div class="buscador_edit pt-2 pb-2">
+        <div class="btn btn-danger getedit d-none">Click</div>
+        <div class="btn btn-danger save_id d-none">Save</div>
+        <div class="form-group">
+          <label for="tipo">Seleccionar</label>
+          <select class="form-control btn btn-light" name="tipo" id="loadedist" onchange="getgames(this)">
+            <option value="" selected>--Select</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="tipo">Estado</label>
+          <select class="form-control btn btn-light" name="state" id="state_select">
+            <option value="" selected disabled>--Select</option>
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="web">Titulo del articulo</label>
+            <input type="text" class="form-control" name="titulo" id="titulo" placeholder="...">
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="temp" class="text_set_title">Video ID</label>
+            <input type="text" class="form-control" name="video" id="video" placeholder="...">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="temp" class="text_set_title">Imagen del Articulo</label>
+        <input type="text" class="form-control" name="img" id="imgedit" placeholder="...">
+      </div>
+
+      <div class="form-group">
+        <label for="temp" class="text_set_title">Capturas</label>
+        <textarea id="capturas" name="capturas" class="form-control" rows="4" cols="80" placeholder="..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="temp" class="text_set_title">Descripcion breve</label>
+        <textarea id="dcp" name="dcp" class="form-control" rows="4" cols="80" placeholder="..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="dcp">Descripcion Completa</label>
+        <textarea id="infoall" name="infoall" class="form-control" rows="20" cols="80" placeholder="..."></textarea>
+
+      </div>
+    </div>
+    <div class="no_parte two_parte">
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="web">Usuario</label>
+            <input type="text" class="form-control" name="uploader" id="uploader" placeholder="...">
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="temp" class="text_set_title">Imagen del Usuario</label>
+            <input type="text" class="form-control" name="userimg" id="userimg" placeholder="...">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="web">Peso</label>
+            <input type="text" class="form-control" name="peso" id="peso" placeholder="...">
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="temp" class="text_set_title">Servidor</label>
+            <input type="text" class="form-control" name="servidor" id="servidor" placeholder="...">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="temp" class="text_set_title">Generos</label>
+        <textarea name="genero" id="genero" class="form-control" rows="4" cols="80" placeholder="..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="temp" class="text_set_title">Tags</label>
+        <textarea name="tags" id="tags" class="form-control" rows="4" cols="80" placeholder="..."></textarea>
+      </div>
+    </div>
+
+  </form>
+  <div class="lugar_btns pt-0 pb-3 text-right">
+    <button class="btn btn-danger click_back" disabled>Back<span class="num_back d-none">*1</span></button>
+    <button class="btn btn-danger click_next">Next<span class="num_next d-none">*1</span></button>
+    <button class="btn btn-primary click_save">Guardar</button>
+  </div>
+</div>

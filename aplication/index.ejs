@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
+	<meta content="script-src 'self' 'unsafe-inline' 'unsafe-eval';" http-equiv="Content-Security-Policy" />
+	<title>Home | AppWebCat - DtoLKD</title>
+	<link rel="stylesheet" href="assets/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/cog.css">
+	<link rel="stylesheet" href="icons-fonts/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/8.3.2/css/autoComplete.min.css">
+
+</head>
+
+<body class="tt_02">
+	<div class="loadingapp">
+
+	</div>
+	<div class="d-none">
+		<button class="btn btn-danger get_games" data-id="">Ver Juegos</button>
+		<button class="btn btn-danger mensaje_app" data-id="">Click</button>
+		<button class="btn btn-danger newwin">New</button>
+	</div>
+	<div class="vertamanos">
+
+	</div>
+	<%- include('include/menu.ejs') %>
+
+
+
+
+	<div class="appviwe home" id="home">
+		<div class="buscador-hide">
+			<div class="container">
+				<div class="form_buscador">
+				</div>
+			</div>
+		</div>
+		<%- include('include/pages/home.ejs') %>
+		<%- include('include/fotter.ejs') %>
+	</div>
+	<div class="appviwe faq" id="faq">
+		<%- include('include/pages/faq.ejs') %>
+		<%- include('include/fotter.ejs') %>
+	</div>
+	<div class="appviwe docs" id="docs">
+		<%- include('include/pages/docs.ejs') %>
+		<%- include('include/fotter.ejs') %>
+	</div>
+
+	<div class="appviwe buscador" id="buscador">
+		<%- include('include/pages/search.ejs') %>
+		<%- include('include/fotter.ejs') %>
+	</div>
+	<div class="appviwe infodownload" id="infodownload">
+		<%- include('include/pages/download.ejs') %>
+		<%- include('include/fotter.ejs') %>
+	</div>
+
+	<div class="appviwe editor" id="editor">
+		<%- include('include/pages/edit.ejs') %>
+		<%- include('include/fotter.ejs') %>
+	</div>
+
+	<div class="appviwe newart" id="newart">
+		<%- include('include/pages/newart.ejs') %>
+		<%- include('include/fotter.ejs') %>
+	</div>
+
+	<div class="appviwe configweb" id="configweb">
+		<%- include('include/pages/config.ejs') %>
+		<%- include('include/fotter.ejs') %>
+	</div>
+
+	<!-- Modal -->
+<div class="modal fade" id="showaviso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">AppWebCat</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="aviso_app title_input_all">
+        	para aplicar los cambios debes reiniciar la aplicación
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+	<script src="js/jquery-3.5.1.js"></script>
+	<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
+	<script src="auto/js/autoComplete.js"></script>
+	<script src="auto/js/index.js"></script>
+	<script src="emmet/emmet.js"></script>
+	<script src="js/cog.js"></script>
+
+
+	<script type="text/javascript">
+		$('.one_parte').show();
+		$('.click_back').click(function(event) {
+			var text = $('.num_back').text();
+			var back_num = text.replace(/\*/g, "");
+			$('.no_parte').fadeOut(200);
+			if (back_num == '1') {
+				$('.one_parte').fadeIn(200);
+				$('.num_back').text('*1');
+				$('.click_next').removeAttr('disabled');
+				$('.click_back').attr('disabled', '');
+				$('.click_save').hide();
+			}
+		});
+
+		$('.click_next').click(function(event) {
+			var text = $('.num_next').text();
+			var next_num = text.replace(/\*/g, "");
+			$('.no_parte').fadeOut(200);
+			if (next_num == '1') {
+				$('.two_parte').fadeIn(200);
+				$('.num_next').text('*1');
+				$('.click_back').removeAttr('disabled');
+				$('.click_next').attr('disabled', '');
+				$('.click_save').show();
+			}
+
+		});
+
+		$('.click_save').click(function (event) {
+			$('.no_parte').fadeOut(200);
+			$('.save_id').click();
+			$('.one_parte').fadeIn(200);
+			$('.num_back').text('*1');
+			$('.click_next').removeAttr('disabled');
+			$('.click_back').attr('disabled', '');
+			$('.click_save').hide();
+		});
+
+		function getgames() {
+			var selectedValues = $('#loadedist').val();
+			$('.getedit').attr('data-id', selectedValues);
+			$('.save_id').attr('data-id', selectedValues);
+			$('.getedit').click();
+		}
+
+		$('.clicktext').click(function(event) {
+			alert($(this).text());
+		});
+
+
+	</script>
+
+	<script>
+		emmet.require('textarea').setup({
+			pretty_break: true, // enable formatted line breaks (when inserting
+					            // between opening and closing tag)
+			use_tab: true       // expand abbreviations by Tab key
+		});
+	</script>
+</body>
+
+</html>

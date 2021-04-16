@@ -38,6 +38,18 @@
 				</div>
 			</div>
 		</div>
+		<div class="webinf">
+			<p id="version"></p>
+			<div id="notification" class="hidden">
+				<p id="message"></p>
+				<button id="close-button" onClick="">
+					Close
+				</button>
+				<button id="restart-button" onClick="" class="hidden">
+					Restart
+				</button>
+			</div>
+		</div>
 		<%- include('include/pages/home.ejs') %>
 		<%- include('include/fotter.ejs') %>
 	</div>
@@ -75,26 +87,26 @@
 	</div>
 
 	<!-- Modal -->
-<div class="modal fade" id="showaviso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">AppWebCat</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="aviso_app title_input_all">
-        	para aplicar los cambios debes reiniciar la aplicación
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
-      </div>
-    </div>
-  </div>
-</div>
+	<div class="modal fade" id="showaviso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">AppWebCat</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="aviso_app title_input_all">
+						para aplicar los cambios debes reiniciar la aplicación
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 
@@ -137,7 +149,7 @@
 
 		});
 
-		$('.click_save').click(function (event) {
+		$('.click_save').click(function(event) {
 			$('.no_parte').fadeOut(200);
 			$('.save_id').click();
 			$('.one_parte').fadeIn(200);
@@ -157,15 +169,13 @@
 		$('.clicktext').click(function(event) {
 			alert($(this).text());
 		});
-
-
 	</script>
 
 	<script>
 		emmet.require('textarea').setup({
 			pretty_break: true, // enable formatted line breaks (when inserting
-					            // between opening and closing tag)
-			use_tab: true       // expand abbreviations by Tab key
+			// between opening and closing tag)
+			use_tab: true // expand abbreviations by Tab key
 		});
 	</script>
 </body>

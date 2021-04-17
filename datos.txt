@@ -1,3 +1,0 @@
-[DATOS]
-Url = https://lokuedo5000.github.io/viewpc/new.zip
-Name = 1.0.0.0
